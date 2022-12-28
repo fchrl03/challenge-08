@@ -1,14 +1,7 @@
 # Binar: Challenge
 
-- Gunakan express dan sequelize, untuk memenuhi kebutuhan CRUD.
-- Gunakan bcrypt atau bcryptjs untuk mengenkripsi password user.
-- Gunakan passport atau jsonwebtoken, untuk memenuhi kebutuhan Token Based
-  Authentication.
-- Gunakan Swagger Editor, Stoplight Studio, atau tools lain dalam menulis Open API
-  Documentation.
-- Gunakan Swagger, Redoc, Stoplight Element, atau Tools yang memvisualisasikan
-  Open API documentation lainnya.
-- Gunakan seeders untuk menginsert data superadmin.
+- Coverage Unit Test minimal 70%
+- Aplikasi pada repository tersebut dapat ter-deploy dan semua endpoint dapat dikonsumsi dengan baik.
 
 In the project directory, you can run:
 
