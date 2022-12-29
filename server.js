@@ -30,7 +30,7 @@ app.post('/auth/admin', middleware.authenticate, middleware.isSuperAdmin, authCo
 app.get('/auth/me', middleware.authenticate, authController.currentUser);
 
 // Users
-app.get('/users', middleware.authenticate, middleware.isSuperAdmin, userController.getAll);
+app.get('/users', userController.getAll);
 app.delete('/users/:id', middleware.authenticate, middleware.isSuperAdmin, userController.deleteByID);
 
 // Cars

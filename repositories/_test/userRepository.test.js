@@ -10,6 +10,7 @@ describe('create user', () => {
     };
 
     const createdUser = await userRepository.create(userToCreate);
+    console.log(createdUser);
 
     // Assertion
     expect(createdUser.id).toEqual(createdUser.id);
@@ -19,5 +20,5 @@ describe('create user', () => {
 
     // Delete Test Data
     await userRepository.deleteByID({ id: createdUser.id });
-  });
+  }, 60_000);
 });
