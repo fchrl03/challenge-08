@@ -1,5 +1,4 @@
 const { User } = require('../models');
-const { deleteByID } = require('./carRepository');
 
 class UserRepository {
   static async getByID({ id }) {
