@@ -30,7 +30,7 @@ app.post('/auth/admin', middleware.authenticate, middleware.isSuperAdmin, authCo
 app.get('/auth/me', middleware.authenticate, authController.currentUser);
 
 // Users
-app.get('/users', userController.getAll);
+app.get('/users', middleware.authenticate, middleware.isSuperAdmin, userController.getAll);
 app.delete('/users/:id', middleware.authenticate, middleware.isSuperAdmin, userController.deleteByID);
 
 // Cars
@@ -47,3 +47,5 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running in port http://localhost:${process.env.PORT || 8000}`);
 });
+
+module.exports = app;
