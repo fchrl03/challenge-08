@@ -82,7 +82,7 @@ const getByID = async (req, res) => {
 const updateByID = (req, res) => {
   const { id } = req.params;
   const fileToUpload = req.file;
-  const { name, model, picture, rent_price, capacity, description, available, type, year } = req.body;
+  const { name, model, rent_price, capacity, description, available, type, year } = req.body;
   const updatedBy = req.user.name;
   const fileBase64 = fileToUpload.buffer.toString('base64');
   const file = `data:${fileToUpload.mimetype};base64,${fileBase64}`;
