@@ -44,6 +44,11 @@ app.put('/cars/:id', middleware.authenticate, middleware.isTwoAdmin, upload.sing
 // API Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// Homepage
+app.use('/', (req, res) => {
+  res.send('Welcome to the server car homepage');
+});
+
 app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running in port http://localhost:${process.env.PORT || 8000}`);
 });
